@@ -1,0 +1,144 @@
+{
+  "config": "{\"version\":\"5.48\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2},\"customTheme\":{\"name\":\"Solar\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          },
+          {
+            "name": "Solar",
+            "path": "BuiltInThemes/Solar.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "EDA",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"34aed362679ba0886096\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.33616298811545,\"y\":72.12224108658744,\"z\":1000,\"width\":402.1731748726655,\"height\":620.9847198641766,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"FACT.Orders.ItemType\",\"active\":true},{\"queryRef\":\"FACT.Orders.ItemName\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(FACT.Orders.ItemType)\"}],\"Series\":[{\"queryRef\":\"FACT.Orders.ItemType\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"FACT.Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ItemType\"},\"Name\":\"FACT.Orders.ItemType\",\"NativeReferenceName\":\"ItemType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ItemName\"},\"Name\":\"FACT.Orders.ItemName\",\"NativeReferenceName\":\"ItemName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ItemType\"}},\"Function\":5},\"Name\":\"CountNonNull(FACT.Orders.ItemType)\",\"NativeReferenceName\":\"Count of ItemType\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ItemType\"}},\"Function\":5}}},{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ItemType\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FACT.Orders\"}},\"Property\":\"ItemType\"}},\"Right\":{\"Literal\":{\"Value\":\"'Beverages'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FACT.Orders\"}},\"Property\":\"ItemType\"}},\"Right\":{\"Literal\":{\"Value\":\"'Fastfood'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'What kind of foods does the restaurant serve?'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 620.98,
+          "width": 402.17,
+          "x": 18.34,
+          "y": 72.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"62ba48fdb1eb0ce5d153\",\"layouts\":[{\"id\":0,\"position\":{\"x\":587.9796264855688,\"y\":23.225806451612904,\"z\":2000,\"width\":267.70797962648555,\"height\":171.13752122241087,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"FACT.Orders.TransactionType\",\"active\":true}],\"Values\":[{\"queryRef\":\"CountNonNull(FACT.Orders.TransactionType)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"FACT.Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"TransactionType\"},\"Name\":\"FACT.Orders.TransactionType\",\"NativeReferenceName\":\"TransactionType\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"TransactionType\"}},\"Function\":5},\"Name\":\"CountNonNull(FACT.Orders.TransactionType)\",\"NativeReferenceName\":\"Count of TransactionType\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'How can the customers pay?'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 171.14,
+          "width": 267.71,
+          "x": 587.98,
+          "y": 23.23,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7f182a0e2b5280bae08a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.779286926994907,\"y\":0,\"z\":0,\"width\":397.28353140916806,\"height\":45.22920203735144,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"EDA - Exploratory Data Analysis\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"16pt\",\"textDecoration\":\"underline\",\"color\":\"#5c0001\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 45.23,
+          "width": 397.28,
+          "x": 9.78,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c220cd505cb19a040830\",\"layouts\":[{\"id\":0,\"position\":{\"x\":587.9796264855688,\"y\":453.5144312393888,\"z\":3000,\"width\":650.3225806451613,\"height\":228.59083191850596,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM.Date.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DIM.Date.Date Hierarchy.MonthNameShort\",\"active\":true},{\"queryRef\":\"DIM.Date.Date Hierarchy.DayNumber\"}],\"Series\":[{\"queryRef\":\"FACT.Orders.TransactionType\"}],\"Y\":[{\"queryRef\":\"Sum(FACT.Orders.OrderAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM.Date\",\"Type\":0},{\"Name\":\"o\",\"Entity\":\"FACT.Orders\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DIM.Date.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Hierarchy Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"MonthNameShort\"},\"Name\":\"DIM.Date.Date Hierarchy.MonthNameShort\",\"NativeReferenceName\":\"Date Hierarchy MonthNameShort\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"DayNumber\"},\"Name\":\"DIM.Date.Date Hierarchy.DayNumber\",\"NativeReferenceName\":\"Date Hierarchy DayNumber\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"TransactionType\"},\"Name\":\"FACT.Orders.TransactionType\",\"NativeReferenceName\":\"TransactionType\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderAmount\"}},\"Function\":0},\"Name\":\"Sum(FACT.Orders.OrderAmount)\",\"NativeReferenceName\":\"Sum of OrderAmount\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}},{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"MonthNameShort\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'What was the total order amount between 2022 and 2023 depending on transaction type?'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 228.59,
+          "width": 650.32,
+          "x": 587.98,
+          "y": 453.51,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f76fca9fa3d83c7a1bbd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":587.9796264855688,\"y\":206.5874363327674,\"z\":4000,\"width\":650.3225806451613,\"height\":199.25297113752123,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FACT.Orders.Quantity)\"}],\"Category\":[{\"queryRef\":\"FACT.Orders.Quantity\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"FACT.Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":5},\"Name\":\"Sum(FACT.Orders.Quantity)\",\"NativeReferenceName\":\"Count of Quantity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"},\"Name\":\"FACT.Orders.Quantity\",\"NativeReferenceName\":\"Quantity\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'How many items are customers ordering per order?'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 199.25,
+          "width": 650.32,
+          "x": 587.98,
+          "y": 206.59,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection72216e0077e70e28c013",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b2ee7a8343392943d202\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.779286926994907,\"y\":0,\"z\":0,\"width\":277.4872665534805,\"height\":693.106960950764,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Measures table.Total orders\"},{\"queryRef\":\"Measures table.Total profit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measures table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total orders\"},\"Name\":\"Measures table.Total orders\",\"NativeReferenceName\":\"Total orders\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total profit\"},\"Name\":\"Measures table.Total profit\",\"NativeReferenceName\":\"Total profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total orders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}},\"selector\":{\"id\":\"default\"}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 693.11,
+          "width": 277.49,
+          "x": 9.78,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Checklist",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection7d859f4275c1c740402b",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"11ba1ce6b09098579407\",\"layouts\":[{\"id\":0,\"position\":{\"x\":573.3106960950764,\"y\":50.1188455008489,\"z\":1000,\"width\":279.9320882852292,\"height\":279.9320882852292,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Who is this dashboard for?\"}]},{\"textRuns\":[{\"value\":\"A small restaurant owner, who would like to find out how the seasonal, temporal trends in their restaurant.\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Sometimes, they might want more detail (e.g. into order numbers, when some anomalies are detected. \"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 279.93,
+          "width": 279.93,
+          "x": 573.31,
+          "y": 50.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8c0da589caacdc70a56e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":116,\"y\":340,\"width\":280,\"height\":280,\"z\":1001,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Dashboard page plan:\"}]},{\"textRuns\":[{\"value\":\"CARDS AND INDICATORS (Total orders, Orders MTD + movement from previous month), most ordered product all time + MTD + diff from prev month, total profit + MTD +diff, mean profit + MTD + diff\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Orders over time count\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Profit over time (moving avg)\"}],\"listType\":\"bullet\"}]}}]}}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 116.00,
+          "y": 340.00,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"a8c6388b3a0790eeec03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":116.12903225806451,\"y\":50.1188455008489,\"z\":0,\"width\":279.9320882852292,\"height\":279.9320882852292,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Create DIM DATE\"}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"Tidy up the names of steps in Power Query\"}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"Page 1 EDA - show what data there is\"}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"Page 2 - Analysis of data\"}],\"listType\":\"ordered\"}]}}]}}}",
+          "filters": "[]",
+          "height": 279.93,
+          "width": 279.93,
+          "x": 116.13,
+          "y": 50.12,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Solar"
+}

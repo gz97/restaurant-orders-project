@@ -1,0 +1,497 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.122.1066.0 (23.10)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"FACT.Orders\",\"Measures table\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "21e45b54-94b9-46ba-8bca-ce379f45cb3f",
+        "fromColumn": "OrderDate",
+        "fromTable": "FACT.Orders",
+        "toColumn": "Date",
+        "toTable": "DIM.Date"
+      }
+    ],
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "FACT.Orders",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "order_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6df0fb2c-7543-44fa-a37f-54decf84e246",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OrderDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "d69096d0-4356-4ae8-9337-07d912afd85c",
+            "sourceColumn": "OrderDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ItemName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38a23709-0f62-42f5-83ef-51617e510cbc",
+            "sourceColumn": "ItemName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ItemType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9ae8a660-3b4a-41fa-81fb-69cdcc17225e",
+            "sourceColumn": "ItemType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ItemPrice",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-GB\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\"£\"#,0.00;-\"£\"#,0.00;\"£\"#,0.00",
+            "lineageTag": "c78d9c13-e5f2-46da-9eba-1994a8757698",
+            "sourceColumn": "ItemPrice",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Quantity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3357abd7-fe55-447a-9042-886d811cdd12",
+            "sourceColumn": "Quantity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "OrderAmount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-GB\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\"£\"#,0.00;-\"£\"#,0.00;\"£\"#,0.00",
+            "lineageTag": "e1dd6cca-daf5-4f5e-a9c3-e2c9b55eeb02",
+            "sourceColumn": "OrderAmount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TransactionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2c6b23c0-26b1-4652-90cb-22d023077b2d",
+            "sourceColumn": "TransactionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CustomerGender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0babedbf-8dbb-405f-bad5-9960640fc90f",
+            "sourceColumn": "CustomerGender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TimeOfSale",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0e3d7e0f-613e-40d2-90a3-74ff95dd1443",
+            "sourceColumn": "TimeOfSale",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b291a684-2e6d-4ee3-b433-b6cb1a86136e",
+        "partitions": [
+          {
+            "name": "FACT.Orders",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\gosia\\Documents\\Self-development\\Projects\\PowerBIProject_RestaurantOrders\\Balaji Fast Food Sales.csv\"),[Delimiter=\",\", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Promoted Headers\",\"-\",\"/\",Replacer.ReplaceText,{\"date\"}),",
+                "    #\"Changed Type with Locale\" = Table.TransformColumnTypes(#\"Replaced Value\", {{\"date\", type date}}, \"en-US\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Changed Type with Locale\",{{\"item_price\", type number}, {\"quantity\", Int64.Type}, {\"transaction_amount\", type number}}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Changed Type\",\"\",\"<missing>\",Replacer.ReplaceValue,{\"transaction_type\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mr.\",\"Male\",Replacer.ReplaceText,{\"received_by\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Mrs.\",\"Female\",Replacer.ReplaceText,{\"received_by\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"Online\",\"Card\",Replacer.ReplaceText,{\"transaction_type\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Replaced Value4\",{{\"date\", \"OrderDate\"}, {\"item_name\", \"ItemName\"}, {\"item_type\", \"ItemType\"}, {\"item_price\", \"ItemPrice\"}, {\"quantity\", \"Quantity\"}, {\"transaction_amount\", \"OrderAmount\"}, {\"transaction_type\", \"TransactionType\"}, {\"received_by\", \"CustomerGender\"}, {\"time_of_sale\", \"TimeOfSale\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DIM.Date",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "66ab6ef31ac4476c86b343529d5b420a"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "2d2d1657-8cf7-44d7-90ef-a3857597ab0b",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "6740ff0c-a9d0-4c80-a235-74f82fbe9f24",
+            "sourceColumn": "[Year]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "MonthNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "6aa64e37-4907-4b94-96e1-926ac158ec28",
+            "sourceColumn": "[MonthNum]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "MonthName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "07d54d4d-4f46-4e82-a2ce-09d5af4f365b",
+            "sortByColumn": "MonthNum",
+            "sourceColumn": "[MonthName]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "MonthNameShort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "aa97424b-daa9-4e5f-9756-9f91efc9b4f4",
+            "sortByColumn": "MonthNum",
+            "sourceColumn": "[MonthNameShort]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DayNumber",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "6cbf2a01-13c5-48f7-973c-e73bdcc23f85",
+            "sourceColumn": "[DayNumber]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "WeekDayShort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c5bb6f92-85c4-4858-8695-db24335a69ed",
+            "sortByColumn": "WeekdayNum",
+            "sourceColumn": "[WeekDayShort]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "WeekdayNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "fdf82cca-b922-49c2-8ec7-1e52550dc452",
+            "sourceColumn": "[WeekdayNum]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "699ac794-79d2-4665-ae90-a6968511f9e1",
+                "ordinal": 0
+              },
+              {
+                "name": "MonthNameShort",
+                "column": "MonthNameShort",
+                "lineageTag": "55721041-d0bb-46f7-a83d-1740711da444",
+                "ordinal": 1
+              },
+              {
+                "name": "DayNumber",
+                "column": "DayNumber",
+                "lineageTag": "fac7f59d-e6e2-4e9b-808c-3fc10b62ebe5",
+                "ordinal": 2
+              }
+            ],
+            "lineageTag": "acc6409a-5880-44c6-9207-3c7c41c252fe"
+          }
+        ],
+        "lineageTag": "1cf4b968-5925-4368-8df5-3d843a0e8e5a",
+        "partitions": [
+          {
+            "name": "DIM.Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "",
+                "VAR dates = ",
+                "    CALENDAR(\"01/01/2022\", \"31/12/2023\")",
+                "RETURN",
+                "    ADDCOLUMNS(",
+                "        dates,",
+                "        \"Year\", YEAR([Date]),",
+                "        \"MonthNum\", MONTH([Date]),",
+                "        \"MonthName\", FORMAT([Date], \"mmmm\"),",
+                "        \"MonthNameShort\", FORMAT([Date], \"mmm\"),",
+                "        \"DayNumber\", DAY([Date]),",
+                "        \"WeekDayShort\", FORMAT([Date], \"ddd\"),",
+                "        \"WeekdayNum\", WEEKDAY([Date], 2)",
+                "    )"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Measures table",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "9ad04129-f694-4e47-89c8-a5f500c02f9f",
+        "measures": [
+          {
+            "name": "Total orders",
+            "expression": [
+              "",
+              "COUNTROWS('FACT.Orders')"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "e622923f-edb9-4d57-8cfd-be9feea78505"
+          },
+          {
+            "name": "Total profit",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-GB\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "SUM('FACT.Orders'[OrderAmount])"
+            ],
+            "formatString": "\"£\"#,0;-\"£\"#,0;\"£\"#,0",
+            "lineageTag": "bbef6ff3-0c08-4f9b-be10-1bb8818317b9"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measures table",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
